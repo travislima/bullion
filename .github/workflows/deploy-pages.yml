@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/bullion-mds-recreation-audit-g2l4l7
   workflow_dispatch:
 
 permissions:
