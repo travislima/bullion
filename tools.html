@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools & Calculators — Bullion | SA Income Tax Calculator</title>
+  <meta name="description" content="Free interactive tools from Bullion: a South African income tax calculator, retirement and risk planning tools, and QR codes for our campaigns.">
+  <link rel="icon" type="image/png" href="assets/img/bullion-mark.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tools & Calculators — Bullion | SA Income Tax Calculator">
+  <meta property="og:description" content="Free interactive tools from Bullion: a South African income tax calculator, retirement and risk planning tools, and QR codes for our campaigns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tax-tables.js"></script>
+  <script defer src="assets/vendor/qrcode.min.js"></script>
+  <script defer src="assets/js/tools.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Bullion — authorised by Sanlam — home">
+        <img src="assets/img/bullion-logo-dark.png" alt="Bullion — authorised by Sanlam" width="190" height="80">
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="join.html" data-i18n="nav.join">Join us</a></li>
+          <li><a href="tools.html" data-i18n="nav.tools" aria-current="page">Tools</a></li>
+          <li><a href="insights/index.html" data-i18n="nav.insights">Insights</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a class="nav-cta" href="contact.html#book" data-i18n="nav.book">Book a meeting</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="af" aria-pressed="false">AF</button>
+          <button type="button" data-lang="xh" aria-pressed="false">XH</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <p class="lang-notice" role="status" aria-live="polite"></p>
+
+  <main id="main">
+    <section class="dark hero" style="padding-bottom:clamp(3rem,7vw,5rem);">
+      <span class="arc-motif" style="width:520px;height:520px;right:-200px;top:-240px;" aria-hidden="true"></span>
+      <div class="wrap" style="grid-template-columns:1fr;">
+        <div>
+          <span class="eyebrow" data-i18n="tools.eyebrow">Tools &amp; calculators</span>
+          <h1 data-i18n="tools.h1">See the numbers for yourself</h1>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="tools.lead">Work out where you stand, then talk to an advisor about what to do with it. No sign-up, nothing stored.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Income tax calculator -->
+    <section class="paper" id="tax-calculator">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="tax.eyebrow">Income tax calculator</span>
+          <h2 data-i18n="tax.h2">What will you pay in tax this year?</h2>
+          <p><span data-i18n="tax.intro">South African personal income tax for the</span> <strong data-tax-year>2025/26</strong> <span data-i18n="tax.intro2">tax year</span> (<span data-tax-period>1 March 2025 – 28 February 2026</span>).</p>
+        </div>
+
+        <div id="tax-unverified" class="notice-warn" hidden>
+          <strong>Not yet verified.</strong> These tax figures still need to be checked against the current SARS tables before this page goes live. See <code>assets/js/tax-tables.js</code>.
+        </div>
+
+        <div class="calc-grid">
+          <form id="tax-form" class="calc-form reveal" novalidate>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="tax-income" data-i18n="tax.income">Your income before tax (Rand) *</label>
+                <input id="tax-income" type="number" min="0" step="1000" required placeholder="e.g. 45000">
+              </div>
+              <div class="field">
+                <label for="tax-period-input" data-i18n="tax.period">That amount is per</label>
+                <select id="tax-period-input">
+                  <option value="month" data-i18n="tax.month">Month</option>
+                  <option value="year" data-i18n="tax.year">Year</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="tax-age" data-i18n="tax.age">Your age</label>
+                <input id="tax-age" type="number" min="0" max="120" value="35">
+              </div>
+              <div class="field full">
+                <label for="tax-ra" data-i18n="tax.ra">Retirement fund contribution (% of income)</label>
+                <input id="tax-ra" type="number" min="0" max="100" step="0.5" value="0">
+              </div>
+            </div>
+            <button class="btn btn-primary mt-2" type="submit" data-i18n="tax.calculate">Calculate my tax</button>
+          </form>
+
+          <div id="tax-result" class="calc-result" hidden>
+            <h3><span data-i18n="tax.result">Your estimate for</span> <span id="r-tax-year">2025/26</span></h3>
+            <dl class="calc-rows">
+              <div><dt data-i18n="tax.r.annual">Annual income</dt><dd id="r-annual">—</dd></div>
+              <div><dt data-i18n="tax.r.deduction">Retirement deduction</dt><dd id="r-deduction">—</dd></div>
+              <div><dt data-i18n="tax.r.taxable">Taxable income</dt><dd id="r-taxable">—</dd></div>
+              <div class="calc-major"><dt data-i18n="tax.r.tax">Tax for the year</dt><dd id="r-tax">—</dd></div>
+              <div><dt data-i18n="tax.r.monthly">Tax per month</dt><dd id="r-monthly">—</dd></div>
+              <div><dt data-i18n="tax.r.takehome">Take-home for the year</dt><dd id="r-takehome">—</dd></div>
+              <div><dt data-i18n="tax.r.marginal">Marginal rate</dt><dd id="r-marginal">—</dd></div>
+              <div><dt data-i18n="tax.r.effective">Effective rate</dt><dd id="r-effective">—</dd></div>
+            </dl>
+            <p id="r-note" class="calc-note"></p>
+            <a class="btn btn-primary" href="contact.html#book" data-i18n="tax.discuss">Discuss this with an advisor</a>
+          </div>
+        </div>
+
+        <p class="calc-disclaimer" data-i18n="tax.disclaimer">This calculator gives a general estimate using the standard SARS tables, rebates and the retirement-fund deduction. It does not account for medical tax credits, fringe benefits, travel allowances or other income. It is not tax advice — speak to an advisor about your own position.</p>
+      </div>
+    </section>
+
+    <!-- Sanlam tools -->
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="sanlamtools.eyebrow">More planning tools</span>
+          <h2 data-i18n="sanlamtools.h2">Sanlam's full toolkit</h2>
+          <p data-i18n="sanlamtools.p">As an authorised Sanlam practice, our clients get the full power of Sanlam's planning tools — then a real advisor to interpret the results with you.</p>
+        </div>
+        <!-- TODO: confirm exact Sanlam tool URLs before launch (see README) -->
+        <div class="grid grid-4">
+          <article class="card reveal"><div class="dot" aria-hidden="true"></div><h3 data-i18n="sanlamtools.1">Retirement calculator</h3><p data-i18n="sanlamtools.1d">See what your retirement needs.</p><a class="card-link" href="https://www.sanlam.co.za" target="_blank" rel="noopener" data-i18n="sanlamtools.open">Open tool</a></article>
+          <article class="card reveal"><div class="dot" aria-hidden="true"></div><h3 data-i18n="sanlamtools.2">Risk assessment</h3><p data-i18n="sanlamtools.2d">Understand the cover your family needs.</p><a class="card-link" href="https://www.sanlam.co.za" target="_blank" rel="noopener" data-i18n="sanlamtools.open">Open tool</a></article>
+          <article class="card reveal"><div class="dot" aria-hidden="true"></div><h3 data-i18n="sanlamtools.3">Financial check</h3><p data-i18n="sanlamtools.3d">A quick pulse on your financial health.</p><a class="card-link" href="https://www.sanlam.co.za" target="_blank" rel="noopener" data-i18n="sanlamtools.open">Open tool</a></article>
+          <article class="card reveal"><div class="dot" aria-hidden="true"></div><h3 data-i18n="sanlamtools.4">Online will</h3><p data-i18n="sanlamtools.4d">Start your will online.</p><a class="card-link" href="https://www.sanlam.co.za" target="_blank" rel="noopener" data-i18n="sanlamtools.open">Open tool</a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- QR codes for campaigns -->
+    <section class="paper">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="qr.eyebrow">For our team</span>
+          <h2 data-i18n="qr.h2">Campaign QR codes</h2>
+          <p data-i18n="qr.p">Print these on posters, flyers and business cards. Each one opens a landing page built for that campaign, so enquiries arrive tagged with where they came from.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card qr-card reveal" data-qr="/go/campus/">
+            <canvas aria-label="QR code for the campus recruitment campaign"></canvas>
+            <h3 data-i18n="qr.campus">Campus recruitment</h3>
+            <p data-qr-url class="qr-url">—</p>
+            <div class="qr-actions">
+              <button type="button" class="btn btn-outline-dark" data-qr-download data-i18n="qr.download">Download PNG</button>
+              <a class="card-link" data-qr-open href="go/campus/" data-i18n="qr.preview">Preview page</a>
+            </div>
+          </article>
+        </div>
+        <p class="calc-disclaimer" data-i18n="qr.note">Codes are generated from the domain set in the site config — update the config once the final domain is live and these codes update with it. Duplicate the <code>/go/campus/</code> folder to add another campaign.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta-panel reveal">
+          <span class="arc-motif" style="width:360px;height:360px;right:-140px;top:-160px;" aria-hidden="true"></span>
+          <div>
+            <h2 data-i18n="cta.numbers.h2">Numbers are a starting point, not a plan</h2>
+            <p data-i18n="cta.numbers.p">Bring your result to an advisor and we'll build the plan around it.</p>
+          </div>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="contact.html#book" data-i18n="nav.book">Book a meeting</a>
+            <a class="btn btn-outline-light" href="#" data-config-href="whatsapp" target="_blank" rel="noopener" data-i18n="cta.whatsapp">WhatsApp us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="arc-motif" style="width:420px;height:420px;left:-160px;bottom:-220px;" aria-hidden="true"></span>
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Bullion home">
+        <img src="assets/img/bullion-logo-dark.png" alt="Bullion — authorised by Sanlam" width="190" height="80">
+      </a>
+      <p class="footer-tagline" data-i18n="footer.tagline">Planned For Life</p>
+      <ul class="footer-pillars">
+        <li><a href="services.html#risk-planning" data-i18n="pillars.1">Insure Today</a></li>
+        <li><a href="services.html#retirement-planning" data-i18n="pillars.2">Plan for Tomorrow</a></li>
+        <li><a href="services.html#investment-planning" data-i18n="pillars.3">Invest for the Long Term</a></li>
+        <li><a href="services.html#wills-legacy" data-i18n="pillars.4">Secure Your Legacy</a></li>
+      </ul>
+      <ul class="footer-nav">
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="join.html" data-i18n="nav.join">Join us</a></li>
+        <li><a href="tools.html" data-i18n="nav.tools">Tools</a></li>
+        <li><a href="insights/index.html" data-i18n="nav.insights">Insights</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+      </ul>
+      <div class="footer-legal">
+        <p data-config="sanlamRegulatory">Sanlam Life Insurance Limited is a licensed Life Insurer, authorised FSP and registered Credit Provider (NCRCP43).</p>
+        <p>© <span data-year>2026</span> Bullion. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab" href="#" data-config-href="whatsapp" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.2L2.1 22l4.9-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3a8.2 8.2 0 1 1 6.7 3.6zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.5-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/i18n/strings.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
