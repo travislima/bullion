@@ -51,7 +51,19 @@ The calculator covers the standard tables, age rebates, tax thresholds and the r
 2. **Domain** — set in `config.js`, regenerate `sitemap.xml`/`robots.txt` URLs, add canonicals + redirects from bullionmds.co.za.
 3. **Real contact details** — `config.js` (phone, email, WhatsApp number, office addresses).
 4. **Proofread the Afrikaans and isiXhosa** — `assets/i18n/strings.js`. Draft translations of the approved English copy; financial terminology especially needs a native-speaker check. Remove each language's `lang.notice` string once signed off.
-5. **Photography** — replace `.team-card` placeholders on About; no stock photography (client requirement).
+5. **Photography** — the shoot is the single biggest visual upgrade outstanding. Every image slot currently holds an on-brand SVG placeholder in `assets/img/place/`, sized to the final crop, so the layout reads correctly. Replace like-for-like:
+
+   | Placeholder | Slot | Suggested subject | Crop |
+   |---|---|---|---|
+   | `hero.svg` | Homepage hero | Adviser with a client, or the team | portrait ~4:5 |
+   | `family.svg` | Homepage band, Protect pillar | Family / lifestyle | landscape 3:2 |
+   | `business.svg` | Homepage band, Grow pillar | Business owner or workplace | landscape 3:2 |
+   | `legacy.svg` | Homepage band, Legacy pillar | Generational / handover | landscape 3:2 |
+   | `office.svg` | About | Gqeberha or Humansdorp office | landscape 3:2 |
+   | `article-*.svg` | Insights headers | Editorial / contextual | landscape 8:5 |
+   | adviser photos | `advisers.html`, profiles | Individual portraits, consistent lighting | portrait 4:5 |
+
+   **No stock photography** (client requirement) and — equally important — **no imagery lifted from competitor sites**, which would be a copyright problem on a public URL and an awkward look in the Sanlam submission.
 6. **Sanlam tool URLs** — the Sanlam toolkit row on `tools.html` currently links to the sanlam.co.za root; confirm the exact tool URLs (retirement calculator, risk assessment, financial check, online will).
 7. **Form backend** — forms currently use a `mailto:` handoff with a required POPIA consent checkbox (consent + timestamp included in the message). Point them at a form endpoint/CRM before launch (see `data-lead` handler in `assets/js/main.js`). No form data ever appears in URLs.
 8. **Approve the draft copy.** Written in the brand voice as a working mockup, all pending client sign-off:
