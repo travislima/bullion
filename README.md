@@ -22,7 +22,7 @@ Preview: https://travislima.github.io/bullion/ · Production domain **TBC** (can
 ## Editing the site
 
 - **Contact details / domain / WhatsApp number** — edit **`assets/js/config.js`** only. Every page reads from it (all current values are placeholders per handover §7.3).
-- **Copy & translations** — UI strings live in `assets/i18n/strings.js`. Afrikaans entries are `null` (TODO-AF); paste translations in as they arrive and the language toggle picks them up. Until then AF falls back to EN with a notice.
+- **Copy & translations** — English lives inline in the HTML (the source of truth); Afrikaans and isiXhosa live in `assets/i18n/strings.js`. Both translations are **drafts pending a native-speaker proofread** — the site shows a notice while a draft language is active. Any key without a translation falls back to English automatically. A fourth language is one more object in that file.
 - **Publish an Insights article** — duplicate `insights/market-commentary-sample.html`, replace the bracketed placeholders, remove the `noindex` meta and the yellow "Sample" flag, then add a card to `insights/index.html`.
 - **New campaign landing** — duplicate the `go/campus/` folder as `go/<campaign>/` and point the QR code at it.
 
@@ -39,9 +39,9 @@ The calculator covers the standard tables, age rebates, tax thresholds and the r
 1. **Sanlam brand sign-off** — the logo lockup is an isolated `<img>` in header/footer; easy to swap if Brand Managers require changes. `assets/img/bullion-logo-dark.png` is a derived dark-context variant (white wordmark) generated from the supplied transparent lockup; replace with the official dark asset when vector files arrive.
 2. **Domain** — set in `config.js`, regenerate `sitemap.xml`/`robots.txt` URLs, add canonicals + redirects from bullionmds.co.za.
 3. **Real contact details** — `config.js` (phone, email, WhatsApp number, office addresses).
-4. **Afrikaans copy** — `assets/i18n/strings.js`.
+4. **Proofread the Afrikaans and isiXhosa** — `assets/i18n/strings.js`. Draft translations of the approved English copy; financial terminology especially needs a native-speaker check. Remove each language's `lang.notice` string once signed off.
 5. **Photography** — replace `.team-card` placeholders on About; no stock photography (client requirement).
-6. **Sanlam tool URLs** — the Tools row on `services.html` currently links to sanlam.co.za root; confirm the exact tool URLs.
+6. **Sanlam tool URLs** — the Sanlam toolkit row on `tools.html` currently links to the sanlam.co.za root; confirm the exact tool URLs (retirement calculator, risk assessment, financial check, online will).
 7. **Form backend** — forms currently use a `mailto:` handoff with a required POPIA consent checkbox (consent + timestamp included in the message). Point them at a form endpoint/CRM before launch (see `data-lead` handler in `assets/js/main.js`). No form data ever appears in URLs.
 8. **Recruitment copy on `join.html` and `go/campus/`** — drafted in the brand voice per handover; **needs client approval**.
 9. **Self-host Poppins** — currently loaded from Google Fonts; download the three weights (300/400/500) and serve locally for performance/privacy.
@@ -56,7 +56,9 @@ Plain HTML + CSS + vanilla JS — no build step, hostable anywhere. Deploys to G
 
 - `assets/css/style.css` — design system per the brand board (Bullion Black `#0B0B0D`, Signal Blue `#29ABE2`, Sky Tint `#78CDF4`, Slate `#787E88`, Paper `#F4F5F7`, Poppins)
 - `assets/js/config.js` — single source of truth for contact details/domain
-- `assets/i18n/strings.js` — EN/AF dictionaries (i18n-ready, 3rd language addable)
+- `assets/i18n/strings.js` — AF + XH dictionaries (EN inline; further languages addable)
+- `assets/js/tax-tables.js` — SARS figures for the calculator (**verify yearly**)
+- `assets/js/tools.js` + `assets/vendor/qrcode.min.js` — tax calculator and campaign QR codes
 - `assets/js/main.js` — config injection, language toggle, nav, reveal, guided CTAs, POPIA forms, WhatsApp
 - Accessibility: semantic HTML, skip links, labelled forms, visible focus, `prefers-reduced-motion`, responsive to 360px
 
