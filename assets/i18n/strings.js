@@ -20,6 +20,7 @@ window.BULLION_I18N = {
 
     "nav.tools": "Hulpmiddels",
     "nav.advisers": "Adviseurs",
+    "nav.login": "Kliënt-aanmelding",
 
     "trust.1": "Franchise van die Jaar, Port Elizabeth",
     "trust.2": "Nasionaal eerste in Suid-Afrika",
@@ -246,6 +247,7 @@ window.BULLION_I18N = {
 
     "nav.tools": "Izixhobo",
     "nav.advisers": "Abacebisi",
+    "nav.login": "Ungena umxhasi",
 
     "trust.1": "IFranchise yoNyaka ePort Elizabeth",
     "trust.2": "Kwindawo yoku-1 kuzwelonke eMzantsi Afrika",

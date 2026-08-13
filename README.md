@@ -15,7 +15,7 @@ Preview: https://travislima.github.io/bullion/ · Production domain **TBC** (can
 | `services.html` | 7 personal services with anchors, business assurance, client rewards |
 | `join.html` | Advisor recruitment + sub-franchise proposition, enquiry form |
 | `tools.html` | Interactive SA income tax calculator, Sanlam tool links, campaign QR codes |
-| `insights/` | Blog index + sample article template (duplicate to publish) |
+| `insights/` | Index + **4 draft articles** (one complete, three outlined) + monthly commentary template |
 | `contact.html` | Guided CTA, meeting form, offices (PE + Humansdorp), map |
 | `privacy.html` | POPIA privacy policy (draft — compliance review before launch) |
 | `go/campus/` | Sample QR/campaign landing page (`/go/<campaign>/` pattern, noindex) |
@@ -27,6 +27,7 @@ Preview: https://travislima.github.io/bullion/ · Production domain **TBC** (can
 - **Copy & translations** — English lives inline in the HTML (the source of truth); Afrikaans and isiXhosa live in `assets/i18n/strings.js`. Both translations are **drafts pending a native-speaker proofread** — the site shows a notice while a draft language is active. Any key without a translation falls back to English automatically. A fourth language is one more object in that file.
 - **Publish an Insights article** — duplicate `insights/market-commentary-sample.html`, replace the bracketed placeholders, remove the `noindex` meta and the yellow "Sample" flag, then add a card to `insights/index.html`.
 - **New campaign landing** — duplicate the `go/campus/` folder as `go/<campaign>/` and point the QR code at it.
+- **Client login** — the header links to Sanlam's client servicing portal (`sanlamonline.co.za`). Confirm this is the correct destination for Bullion clients before launch.
 
 ## Design direction — light & editorial ("that Woolworths feel")
 
@@ -57,7 +58,10 @@ The calculator covers the standard tables, age rebates, tax thresholds and the r
    - `join.html` recruitment copy and the three values
    - `go/campus/` campaign copy
    - `advisers.html` / `adviser-profile.html` — adviser bio, "how I work", facts panel
-   - `services.html` business assurance section
+   - `services.html` business assurance section and the three pillar headings
+   - `insights/how-much-to-retire.html` — a complete draft article
+   - `insights/buy-and-sell.html`, `life-cover-calculator.html`, `tax-deadline.html` — openings written, remaining sections outlined in square brackets for the team to finish
+   - `advisers.html` "what to expect" copy
    - `services.html` client rewards section — **also confirm the current Sanlam rewards programme name and what clients actually qualify for** before this goes live
    Once approved, these strings need Afrikaans and isiXhosa translations adding to `assets/i18n/strings.js` (structure/nav strings are already translated).
 9. **Self-host Poppins** — currently loaded from Google Fonts; download the three weights (300/400/500) and serve locally for performance/privacy.

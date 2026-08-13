@@ -183,7 +183,15 @@ section { padding: clamp(4.5rem, 11vw, 9rem) 0; }
 .brand { display: flex; align-items: center; text-decoration: none; }
 .brand img { height: 58px; width: auto; }
 
-.header-actions { display: flex; align-items: center; gap: 1.5rem; }
+.header-actions { display: flex; align-items: center; gap: 1.4rem; }
+
+.header-login {
+  font-size: 0.8rem; color: var(--slate); text-decoration: none;
+  border-bottom: 1px solid transparent; padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.header-login:hover { color: var(--black); border-bottom-color: var(--signal); }
+@media (max-width: 620px) { .header-login { display: none; } }
 
 .lang-toggle { display: inline-flex; gap: 0.15rem; }
 .lang-toggle button {
