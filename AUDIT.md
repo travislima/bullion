@@ -29,7 +29,7 @@ This environment's network policy blocked direct loading of bullionmds.co.za, so
 | Performance | 4/10 | 10/10 | WordPress-style stack (inferred) → static site, ~85 KB of code total, zero frameworks |
 | Mobile experience | 4/10 | 9/10 | Unverified → responsive from 320px up, dedicated mobile navigation, tested at 390px |
 | Trust & credibility | 3/10 | 7/10 | Mission statement only → full NAP details, hours, structured data, transparent process. (Remaining gap: FSP licence number and team photos — needs client input) |
-| Brand & visual identity | 3/10 | 9/10 | Generic theme (inferred) → bespoke "bullion" identity: ink navy + gold, custom logo mark, consistent design system |
+| Brand & visual identity | 3/10 | 9/10 | Generic theme (inferred) → official Bullion identity: black/white/azure, recreated SVG logo, consistent design system |
 
 ---
 
@@ -101,7 +101,7 @@ Plain HTML/CSS/vanilla JS. The entire codebase is **~85 KB across all five pages
 
 ### Brand — a bespoke identity
 
-Ink-navy and bullion-gold palette, a custom stacked-gold-bars logo mark, serif display type (Fraunces) with Inter body text, and a consistent component system (cards, pathway tiles, steps, FAQ accordions) across every page.
+The site is built on Bullion's official identity — the circle-B logo (recreated as crisp SVG), its black/white/azure palette, and a thin uppercase wordmark treatment (Raleway) matching the logotype — applied through a consistent component system (cards, pathway tiles, steps, FAQ accordions) across every page. "MDS" is spelled out where it matters: Management : Distribution : Services.
 
 ---
 

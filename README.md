@@ -18,7 +18,7 @@ A modern recreation of [bullionmds.co.za](https://bullionmds.co.za/) as a fast, 
 
 Plain HTML + CSS + a small vanilla JS file. No build step, no frameworks — host it anywhere (any static host, cPanel, Netlify, GitHub Pages).
 
-- `assets/css/style.css` — design system (ink navy + bullion gold + warm paper)
+- `assets/css/style.css` — design system built on the official Bullion identity (black, white, azure blue; thin Raleway wordmark)
 - `assets/js/main.js` — mobile nav, scroll-reveal, form handling, footer year
 - SEO: unique titles/descriptions, canonical URLs, Open Graph, JSON-LD (`FinancialService` + `ContactPage`), `sitemap.xml`, `robots.txt`
 - Accessibility: skip links, landmarks, focus styles, `prefers-reduced-motion` support, labelled forms
