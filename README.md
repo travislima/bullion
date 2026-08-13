@@ -26,6 +26,14 @@ Preview: https://travislima.github.io/bullion/ · Production domain **TBC** (can
 - **Publish an Insights article** — duplicate `insights/market-commentary-sample.html`, replace the bracketed placeholders, remove the `noindex` meta and the yellow "Sample" flag, then add a card to `insights/index.html`.
 - **New campaign landing** — duplicate the `go/campus/` folder as `go/<campaign>/` and point the QR code at it.
 
+## Design direction — light & editorial ("that Woolworths feel")
+
+The site uses a **light, white-dominant editorial treatment**: generous whitespace, hairline rules instead of boxed cards, black buttons, and Signal Blue demoted to fine accents, small marks and links. A single dark section (the planning philosophy) and the footer provide contrast.
+
+**This deviates from the approved mockup**, which was dark-themed throughout. The change follows the client's own north star in the handover — *"clean, premium, personal… that Woolworths feel"* — and their later direction for "simple, elegant, premium". Brand colours, logo lockup and approved copy are unchanged.
+
+**Show this to the client (and include it in the Sanlam submission) so the direction is signed off explicitly**, since the mockup on file no longer matches the build. If they prefer the dark mockup, the palette is token-driven — reverting is a change to `:root` and the section classes, not a rebuild.
+
 ## ⚠️ Launch blocker: verify the tax tables
 
 `assets/js/tax-tables.js` holds the SARS brackets, rebates and thresholds that drive the calculator on `tools.html`. **They were entered from knowledge and have not been checked against a live SARS publication.** Until someone verifies them the page shows a visible "Not yet verified" banner.
@@ -54,7 +62,7 @@ The calculator covers the standard tables, age rebates, tax thresholds and the r
 
 Plain HTML + CSS + vanilla JS — no build step, hostable anywhere. Deploys to GitHub Pages automatically on push to `main` (`.github/workflows/deploy-pages.yml`).
 
-- `assets/css/style.css` — design system per the brand board (Bullion Black `#0B0B0D`, Signal Blue `#29ABE2`, Sky Tint `#78CDF4`, Slate `#787E88`, Paper `#F4F5F7`, Poppins)
+- `assets/css/style.css` — design system per the brand board (Bullion Black `#0B0B0D`, Signal Blue `#29ABE2`, Sky Tint `#78CDF4`, Slate, Paper, Poppins), applied in a light editorial treatment
 - `assets/js/config.js` — single source of truth for contact details/domain
 - `assets/i18n/strings.js` — AF + XH dictionaries (EN inline; further languages addable)
 - `assets/js/tax-tables.js` — SARS figures for the calculator (**verify yearly**)
