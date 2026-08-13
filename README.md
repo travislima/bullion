@@ -10,7 +10,9 @@ Preview: https://travislima.github.io/bullion/ · Production domain **TBC** (can
 |---|---|
 | `index.html` | Homepage — built to the approved mockup (hero, who we are, 7 services, why Bullion, philosophy, guided CTA, contact) |
 | `about.html` | Practice story, "Sanlam is our FSP" trust explainer, awards, team placeholders |
-| `services.html` | 7 services with anchors + Sanlam tools link-out row |
+| `advisers.html` | Adviser grid by office/speciality, vCard downloads, "what to expect" |
+| `adviser-profile.html` | **Template** — duplicate per adviser (noindex until real profiles exist) |
+| `services.html` | 7 personal services with anchors, business assurance, client rewards |
 | `join.html` | Advisor recruitment + sub-franchise proposition, enquiry form |
 | `tools.html` | Interactive SA income tax calculator, Sanlam tool links, campaign QR codes |
 | `insights/` | Blog index + sample article template (duplicate to publish) |
@@ -51,7 +53,13 @@ The calculator covers the standard tables, age rebates, tax thresholds and the r
 5. **Photography** — replace `.team-card` placeholders on About; no stock photography (client requirement).
 6. **Sanlam tool URLs** — the Sanlam toolkit row on `tools.html` currently links to the sanlam.co.za root; confirm the exact tool URLs (retirement calculator, risk assessment, financial check, online will).
 7. **Form backend** — forms currently use a `mailto:` handoff with a required POPIA consent checkbox (consent + timestamp included in the message). Point them at a form endpoint/CRM before launch (see `data-lead` handler in `assets/js/main.js`). No form data ever appears in URLs.
-8. **Recruitment copy on `join.html` and `go/campus/`** — drafted in the brand voice per handover; **needs client approval**.
+8. **Approve the draft copy.** Written in the brand voice as a working mockup, all pending client sign-off:
+   - `join.html` recruitment copy and the three values
+   - `go/campus/` campaign copy
+   - `advisers.html` / `adviser-profile.html` — adviser bio, "how I work", facts panel
+   - `services.html` business assurance section
+   - `services.html` client rewards section — **also confirm the current Sanlam rewards programme name and what clients actually qualify for** before this goes live
+   Once approved, these strings need Afrikaans and isiXhosa translations adding to `assets/i18n/strings.js` (structure/nav strings are already translated).
 9. **Self-host Poppins** — currently loaded from Google Fonts; download the three weights (300/400/500) and serve locally for performance/privacy.
 10. **Analytics** — add a cookieless analytics tool (e.g. Plausible/GoatCounter) with form-conversion events.
 11. **Decide the platform.** The 2026 brief specifies WordPress/WooCommerce; this build is static HTML/CSS/JS. See "Platform note" below.

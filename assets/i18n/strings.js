@@ -19,6 +19,7 @@ window.BULLION_I18N = {
     "lang.notice": "Afrikaanse konsepvertaling — finale taalversorging volg voor bekendstelling.",
 
     "nav.tools": "Hulpmiddels",
+    "nav.advisers": "Adviseurs",
 
     "trust.1": "Franchise van die Jaar, Port Elizabeth",
     "trust.2": "Nasionaal eerste in Suid-Afrika",
@@ -244,6 +245,7 @@ window.BULLION_I18N = {
     "lang.notice": "Le yinguqulelo yesiXhosa eseyidrafti — iya kuhlolwa ngumthethi wolwimi phambi kokupapashwa.",
 
     "nav.tools": "Izixhobo",
+    "nav.advisers": "Abacebisi",
 
     "trust.1": "IFranchise yoNyaka ePort Elizabeth",
     "trust.2": "Kwindawo yoku-1 kuzwelonke eMzantsi Afrika",
