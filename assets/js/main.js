@@ -19,29 +19,34 @@
     if (kind === "whatsapp") el.href = "https://wa.me/" + CFG.whatsapp + "?text=" + encodeURIComponent(CFG.whatsappMessage || "");
   });
 
-  /* ---------- Language toggle (EN/AF, persistent, EN fallback) ---------- */
+  /* ---------- Language toggle (EN/AF/XH, persistent, EN fallback) ----------
+     English lives inline in the HTML (source of truth). On first pass we
+     cache it, so switching back to EN — or hitting an untranslated key —
+     always restores the original text. */
+  var LANG_TAGS = { en: "en-ZA", af: "af-ZA", xh: "xh-ZA" };
+  var enCache = new Map();
   function currentLang() {
-    try { return localStorage.getItem("bullion-lang") || "en"; } catch (e) { return "en"; }
-  }
-  function t(lang, key) {
-    var dict = I18N[lang] || {};
-    var v = dict[key];
-    if (v == null) v = (I18N.en || {})[key];
-    return v;
+    try {
+      var l = localStorage.getItem("bullion-lang") || "en";
+      return LANG_TAGS[l] ? l : "en";
+    } catch (e) { return "en"; }
   }
   function applyLang(lang) {
-    document.documentElement.lang = lang === "af" ? "af-ZA" : "en-ZA";
+    document.documentElement.lang = LANG_TAGS[lang] || "en-ZA";
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var v = t(lang, el.getAttribute("data-i18n"));
-      if (v != null) el.textContent = v;
+      var key = el.getAttribute("data-i18n");
+      if (!enCache.has(el)) enCache.set(el, el.textContent);
+      var v = (I18N[lang] || {})[key];
+      el.textContent = v != null ? v : enCache.get(el);
     });
     document.querySelectorAll(".lang-toggle button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang ? "true" : "false");
     });
     var notice = document.querySelector(".lang-notice");
     if (notice) {
-      notice.textContent = lang === "af" ? t("af", "lang.notice") : "";
-      notice.style.display = lang === "af" ? "block" : "none";
+      var msg = lang !== "en" ? (I18N[lang] || {})["lang.notice"] : null;
+      notice.textContent = msg || "";
+      notice.style.display = msg ? "block" : "none";
     }
   }
   document.querySelectorAll(".lang-toggle button").forEach(function (b) {
@@ -113,6 +118,30 @@
         status.textContent = "Your email app should open with your enquiry pre-filled. If it doesn't, email us at " + CFG.email + ".";
         status.className = "form-status ok";
       }
+    });
+  });
+
+  /* ---------- vCard "Save details" (team cards) ---------- */
+  document.querySelectorAll(".btn-vcard").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var name = btn.getAttribute("data-vcard-name") || "Bullion Advisor";
+      var role = btn.getAttribute("data-vcard-role") || "Financial Adviser";
+      var vcf = [
+        "BEGIN:VCARD", "VERSION:3.0",
+        "FN:" + name,
+        "ORG:Bullion — authorised by Sanlam",
+        "TITLE:" + role,
+        "TEL;TYPE=WORK:" + (CFG.phoneHref || ""),
+        "EMAIL;TYPE=WORK:" + (CFG.email || ""),
+        "URL:https://" + (CFG.domain || ""),
+        "END:VCARD"
+      ].join("\r\n");
+      var a = document.createElement("a");
+      a.href = "data:text/vcard;charset=utf-8," + encodeURIComponent(vcf);
+      a.download = name.replace(/\s+/g, "-").toLowerCase() + "-bullion.vcf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
     });
   });
 

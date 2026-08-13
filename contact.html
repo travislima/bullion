@@ -36,6 +36,7 @@
         <div class="lang-toggle" role="group" aria-label="Language">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="af" aria-pressed="false">AF</button>
+          <button type="button" data-lang="xh" aria-pressed="false">XH</button>
         </div>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -50,9 +51,9 @@
       <span class="arc-motif" style="width:520px;height:520px;right:-200px;top:-240px;" aria-hidden="true"></span>
       <div class="wrap" style="grid-template-columns:1fr;">
         <div>
-          <span class="eyebrow">Contact us</span>
+          <span class="eyebrow" data-i18n="contactsec.eyebrow">Contact us</span>
           <h1 data-i18n="contact.h2">Let's build your financial future together</h1>
-          <p class="lead" style="margin-top:1.2rem;">Call, email, WhatsApp or visit — a real advisor answers, not a queue.</p>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="contactpage.lead">Call, email, WhatsApp or visit — a real advisor answers, not a queue.</p>
         </div>
       </div>
     </section>
@@ -60,52 +61,52 @@
     <section class="paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">How can we help?</span>
-          <h2>Tell us what you need</h2>
+          <span class="eyebrow" data-i18n="guided.eyebrow">How can we help?</span>
+          <h2 data-i18n="guided.h2short">Tell us what you need</h2>
         </div>
         <div class="guided-cta reveal">
           <div class="guided-choices" role="group" aria-label="How can we help?">
-            <button type="button" class="guided-choice" data-panel="call" aria-expanded="false">I want an advisor to call me</button>
-            <button type="button" class="guided-choice" data-panel="service" aria-expanded="false">I want to know more about a service</button>
-            <button type="button" class="guided-choice" data-panel="advisor" aria-expanded="false">I want to become an advisor</button>
+            <button type="button" class="guided-choice" data-panel="call" aria-expanded="false" data-i18n="guided.call">I want an advisor to call me</button>
+            <button type="button" class="guided-choice" data-panel="service" aria-expanded="false" data-i18n="guided.service">I want to know more about a service</button>
+            <button type="button" class="guided-choice" data-panel="advisor" aria-expanded="false" data-i18n="guided.advisor">I want to become an advisor</button>
           </div>
           <div class="guided-panel" data-panel="call" hidden>
             <form data-lead data-subject="Please call me — website enquiry" novalidate>
               <div class="form-grid">
-                <div class="field"><label for="g-name">Your name *</label><input id="g-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
-                <div class="field"><label for="g-phone">Phone number *</label><input id="g-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel" required></div>
-                <div class="field full"><label for="g-time">Best time to call</label><select id="g-time" name="time" data-label="Best time"><option value="">Any time</option><option>Morning</option><option>Midday</option><option>Afternoon</option></select></div>
+                <div class="field"><label for="g-name" data-i18n="form.name">Your name *</label><input id="g-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="g-phone" data-i18n="form.phone">Phone number *</label><input id="g-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel" required></div>
+                <div class="field full"><label for="g-time" data-i18n="form.besttime">Best time to call</label><select id="g-time" name="time" data-label="Best time"><option value="" data-i18n="form.anytime">Any time</option><option data-i18n="form.morning">Morning</option><option data-i18n="form.midday">Midday</option><option data-i18n="form.afternoon">Afternoon</option></select></div>
                 <div class="field full">
                   <label class="consent">
                     <input type="checkbox" name="popia-consent" data-label="POPIA consent" required>
-                    <span>I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the <a href="privacy.html">privacy policy</a> (POPIA). We will never share your details for marketing.</span>
+                    <span><span data-i18n="form.consent.pre">I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the </span><a href="privacy.html" data-i18n="form.consent.link">privacy policy</a><span data-i18n="form.consent.post"> (POPIA). We will never share your details for marketing.</span></span>
                   </label>
                 </div>
               </div>
-              <button class="btn btn-primary mt-2" type="submit">Request a call</button>
+              <button class="btn btn-primary mt-2" type="submit" data-i18n="guided.requestcall">Request a call</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
           <div class="guided-panel" data-panel="service" hidden>
             <form data-lead data-subject="Service enquiry — website" novalidate>
               <div class="form-grid">
-                <div class="field"><label for="s-name">Your name *</label><input id="s-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
-                <div class="field"><label for="s-email">Email *</label><input id="s-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
-                <div class="field full"><label for="s-service">Which service? *</label><select id="s-service" name="service" data-label="Service" required><option value="">Choose a service…</option><option>Short-Term Insurance</option><option>Medical Aid &amp; Health Cover</option><option>Investment Planning</option><option>Retirement Planning</option><option>Risk Planning</option><option>Savings Solutions</option><option>Wills &amp; Legacy Planning</option></select></div>
+                <div class="field"><label for="s-name" data-i18n="form.name">Your name *</label><input id="s-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="s-email" data-i18n="form.email">Email *</label><input id="s-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
+                <div class="field full"><label for="s-service" data-i18n="form.whichservice">Which service? *</label><select id="s-service" name="service" data-label="Service" required><option value="" data-i18n="form.chooseservice">Choose a service…</option><option>Short-Term Insurance</option><option>Medical Aid &amp; Health Cover</option><option>Investment Planning</option><option>Retirement Planning</option><option>Risk Planning</option><option>Savings Solutions</option><option>Wills &amp; Legacy Planning</option></select></div>
                 <div class="field full">
                   <label class="consent">
                     <input type="checkbox" name="popia-consent" data-label="POPIA consent" required>
-                    <span>I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the <a href="privacy.html">privacy policy</a> (POPIA). We will never share your details for marketing.</span>
+                    <span><span data-i18n="form.consent.pre">I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the </span><a href="privacy.html" data-i18n="form.consent.link">privacy policy</a><span data-i18n="form.consent.post"> (POPIA). We will never share your details for marketing.</span></span>
                   </label>
                 </div>
               </div>
-              <button class="btn btn-primary mt-2" type="submit">Send my question</button>
+              <button class="btn btn-primary mt-2" type="submit" data-i18n="guided.sendquestion">Send my question</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
           <div class="guided-panel" data-panel="advisor" hidden>
-            <p style="margin-bottom:1rem;">Bullion is growing from 45 to 100 advisors across the Eastern Cape — and we'd like to meet you.</p>
-            <a class="btn btn-primary" href="join.html">Explore joining Bullion</a>
+            <p style="margin-bottom:1rem;" data-i18n="guided.advisortext">Bullion is growing from 45 to 100 advisors across the Eastern Cape — and we'd like to meet you.</p>
+            <a class="btn btn-primary" href="join.html" data-i18n="guided.explorejoin">Explore joining Bullion</a>
           </div>
         </div>
       </div>
@@ -115,35 +116,35 @@
       <div class="wrap">
         <div class="grid grid-2" style="gap:3rem; align-items:start;">
           <div class="reveal">
-            <span class="eyebrow">Book a meeting</span>
-            <h2>Send us a message</h2>
+            <span class="eyebrow" data-i18n="nav.book">Book a meeting</span>
+            <h2 data-i18n="contactpage.sendmsg">Send us a message</h2>
             <form class="mt-2" data-lead data-subject="Meeting request — website" novalidate>
               <div class="form-grid">
-                <div class="field"><label for="c-name">Full name *</label><input id="c-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
-                <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel"></div>
-                <div class="field full"><label for="c-email">Email *</label><input id="c-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
-                <div class="field full"><label for="c-topic">What would you like to discuss?</label><select id="c-topic" name="topic" data-label="Topic"><option value="">Select…</option><option>Full financial plan</option><option>Short-Term Insurance</option><option>Medical Aid &amp; Health Cover</option><option>Investment Planning</option><option>Retirement Planning</option><option>Risk Planning</option><option>Savings Solutions</option><option>Wills &amp; Legacy Planning</option><option>Becoming an advisor</option></select></div>
-                <div class="field full"><label for="c-msg">Message *</label><textarea id="c-msg" name="message" data-label="Message" rows="5" required></textarea></div>
+                <div class="field"><label for="c-name" data-i18n="form.fullname">Full name *</label><input id="c-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="c-phone" data-i18n="form.phoneopt">Phone</label><input id="c-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel"></div>
+                <div class="field full"><label for="c-email" data-i18n="form.email">Email *</label><input id="c-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
+                <div class="field full"><label for="c-topic" data-i18n="form.topic">What would you like to discuss?</label><select id="c-topic" name="topic" data-label="Topic"><option value="" data-i18n="form.select">Select…</option><option>Full financial plan</option><option>Short-Term Insurance</option><option>Medical Aid &amp; Health Cover</option><option>Investment Planning</option><option>Retirement Planning</option><option>Risk Planning</option><option>Savings Solutions</option><option>Wills &amp; Legacy Planning</option><option>Becoming an advisor</option></select></div>
+                <div class="field full"><label for="c-msg" data-i18n="form.message">Message *</label><textarea id="c-msg" name="message" data-label="Message" rows="5" required></textarea></div>
                 <div class="field full">
                   <label class="consent">
                     <input type="checkbox" name="popia-consent" data-label="POPIA consent" required>
-                    <span>I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the <a href="privacy.html">privacy policy</a> (POPIA). We will never share your details for marketing.</span>
+                    <span><span data-i18n="form.consent.pre">I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the </span><a href="privacy.html" data-i18n="form.consent.link">privacy policy</a><span data-i18n="form.consent.post"> (POPIA). We will never share your details for marketing.</span></span>
                   </label>
                 </div>
               </div>
-              <button class="btn btn-primary mt-2" type="submit">Send message</button>
+              <button class="btn btn-primary mt-2" type="submit" data-i18n="form.send">Send message</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
           <div class="reveal">
-            <span class="eyebrow">Reach us directly</span>
-            <h2>Our details</h2>
+            <span class="eyebrow" data-i18n="contactpage.reach">Reach us directly</span>
+            <h2 data-i18n="contactpage.details">Our details</h2>
             <div class="mt-2" style="display:grid; gap:1.3rem;">
-              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>Phone</h3><p><a href="#" data-config-href="tel"><span data-config="phone">+27 (0)41 000 0000</span></a></p></div></div>
-              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>Email</h3><p><a href="#" data-config-href="mailto"><span data-config="email">info@bullionwealth.co.za</span></a></p></div></div>
-              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>WhatsApp</h3><p><a href="#" data-config-href="whatsapp" target="_blank" rel="noopener">Chat to us on WhatsApp</a></p></div></div>
-              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>Port Elizabeth (Gqeberha)</h3><p>Office address to be confirmed</p></div></div>
-              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>Humansdorp</h3><p>Office address to be confirmed</p></div></div>
+              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3 data-i18n="contactsec.phone">Phone</h3><p><a href="#" data-config-href="tel"><span data-config="phone">+27 (0)41 000 0000</span></a></p></div></div>
+              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3 data-i18n="contactsec.email">Email</h3><p><a href="#" data-config-href="mailto"><span data-config="email">info@bullionwealth.co.za</span></a></p></div></div>
+              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>WhatsApp</h3><p><a href="#" data-config-href="whatsapp" target="_blank" rel="noopener" data-i18n="contactsec.wachat">Chat to us on WhatsApp</a></p></div></div>
+              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>Port Elizabeth (Gqeberha)</h3><p data-i18n="contactpage.addresstbc">Office address to be confirmed</p></div></div>
+              <div class="contact-row"><div class="dot" aria-hidden="true"></div><div><h3>Humansdorp</h3><p data-i18n="contactpage.addresstbc">Office address to be confirmed</p></div></div>
             </div>
             <p class="location-line" data-config="locationLine">Nelson Mandela Bay · Eastern Cape · South Africa</p>
             <div class="mt-2" style="border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);">

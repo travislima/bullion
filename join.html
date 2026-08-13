@@ -36,6 +36,7 @@
         <div class="lang-toggle" role="group" aria-label="Language">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="af" aria-pressed="false">AF</button>
+          <button type="button" data-lang="xh" aria-pressed="false">XH</button>
         </div>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -51,11 +52,11 @@
       <span class="arc-motif" style="width:560px;height:560px;right:-220px;top:-260px;" aria-hidden="true"></span>
       <div class="wrap" style="grid-template-columns:1fr;">
         <div>
-          <span class="eyebrow">Join us</span>
-          <h1>You arrive valuable.<br>We forge something <em class="accent" style="font-style:normal;">more</em>.</h1>
-          <p class="lead" style="margin-top:1.2rem;">Bullion is growing from 45 to 100 advisors across the Eastern Cape. Bring your ambition — we bring the brand, the infrastructure and the track record.</p>
+          <span class="eyebrow" data-i18n="nav.join">Join us</span>
+          <h1><span data-i18n="join.h1a">You arrive valuable.</span><br><span data-i18n="join.h1b">We forge something more.</span></h1>
+          <p class="lead" style="margin-top:1.2rem;" data-i18n="join.lead">Bullion is growing from 45 to 100 advisors across the Eastern Cape. Bring your ambition — we bring the brand, the infrastructure and the track record.</p>
           <div class="hero-ctas mt-2">
-            <a class="btn btn-primary" href="#apply">Start the conversation</a>
+            <a class="btn btn-primary" href="#apply" data-i18n="join.startconv">Start the conversation</a>
           </div>
         </div>
       </div>
@@ -64,9 +65,9 @@
     <section>
       <div class="wrap">
         <div class="mt-2 reveal" style="margin-top:0;"><ul class="awards">
-          <li>Sanlam Blue Star — Franchise of the Year 2024</li>
-          <li>Currently ranked #1 nationally</li>
-          <li>Authorised by Sanlam</li>
+          <li data-i18n="awards.1">Sanlam Blue Star — Franchise of the Year 2024</li>
+          <li data-i18n="awards.2">Currently ranked #1 nationally</li>
+          <li data-i18n="awards.3">Authorised by Sanlam</li>
         </ul></div>
       </div>
     </section>
@@ -74,24 +75,24 @@
     <section class="paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">The proposition</span>
-          <h2>Your own practice, under our brand</h2>
+          <span class="eyebrow" data-i18n="join.prop.eyebrow">The proposition</span>
+          <h2 data-i18n="join.prop.h2">Your own practice, under our brand</h2>
         </div>
         <div class="grid grid-3">
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Start your own practice</h3>
-            <p>Operate your own advisory practice under the Bullion brand and infrastructure — the sub-franchise model gives you ownership without starting from zero.</p>
+            <h3 data-i18n="join.1t">Start your own practice</h3>
+            <p data-i18n="join.1d">Operate your own advisory practice under the Bullion brand and infrastructure — the sub-franchise model gives you ownership without starting from zero.</p>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Infrastructure included</h3>
-            <p>Products, systems, compliance support and an established client proposition are ready on day one — you focus on clients.</p>
+            <h3 data-i18n="join.2t">Infrastructure included</h3>
+            <p data-i18n="join.2d">Products, systems, compliance support and an established client proposition are ready on day one — you focus on clients.</p>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>A culture that compounds</h3>
-            <p>Join the Sanlam Blue Star franchise ranked #1 nationally — a team that measures success in clients served and advisors grown, not just numbers.</p>
+            <h3 data-i18n="join.3t">A culture that compounds</h3>
+            <p data-i18n="join.3d">Join the Sanlam Blue Star franchise ranked #1 nationally — a team that measures success in clients served and advisors grown, not just numbers.</p>
           </article>
         </div>
       </div>
@@ -101,27 +102,27 @@
       <div class="wrap">
         <div class="grid grid-2" style="gap:3rem; align-items:start;">
           <div class="reveal">
-            <span class="eyebrow">Apply</span>
-            <h2>Tell us about yourself</h2>
-            <p style="margin-top:1rem; color:var(--slate);">Whether you're an experienced advisor or exploring the profession, we answer every serious enquiry personally.</p>
+            <span class="eyebrow" data-i18n="join.apply.eyebrow">Apply</span>
+            <h2 data-i18n="join.apply.h2">Tell us about yourself</h2>
+            <p style="margin-top:1rem; color:var(--slate);" data-i18n="join.apply.p">Whether you're an experienced advisor or exploring the profession, we answer every serious enquiry personally.</p>
             <p style="margin-top:1rem; color:var(--slate);">Prefer to talk? Call <a href="#" data-config-href="tel" style="color:var(--signal);"><span data-config="phone">+27 (0)41 000 0000</span></a> or <a href="#" data-config-href="whatsapp" target="_blank" rel="noopener" style="color:var(--signal);">WhatsApp us</a>.</p>
           </div>
           <div class="reveal">
             <form data-lead data-subject="Advisor recruitment enquiry — website" novalidate>
               <div class="form-grid">
-                <div class="field"><label for="j-name">Full name *</label><input id="j-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
-                <div class="field"><label for="j-phone">Phone *</label><input id="j-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel" required></div>
-                <div class="field full"><label for="j-email">Email *</label><input id="j-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
-                <div class="field full"><label for="j-exp">Your experience</label><select id="j-exp" name="experience" data-label="Experience"><option value="">Select…</option><option>Currently an advisor</option><option>Financial services, other role</option><option>New to the industry</option><option>Student / graduate</option></select></div>
-                <div class="field full"><label for="j-msg">Tell us about yourself *</label><textarea id="j-msg" name="message" data-label="Message" rows="4" required placeholder="Where are you now, and what do you want to build?"></textarea></div>
+                <div class="field"><label for="j-name" data-i18n="form.fullname">Full name *</label><input id="j-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="j-phone" data-i18n="form.phone">Phone *</label><input id="j-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel" required></div>
+                <div class="field full"><label for="j-email" data-i18n="form.email">Email *</label><input id="j-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
+                <div class="field full"><label for="j-exp" data-i18n="form.experience">Your experience</label><select id="j-exp" name="experience" data-label="Experience"><option value="" data-i18n="form.select">Select…</option><option>Currently an advisor</option><option>Financial services, other role</option><option>New to the industry</option><option>Student / graduate</option></select></div>
+                <div class="field full"><label for="j-msg" data-i18n="form.aboutyou">Tell us about yourself *</label><textarea id="j-msg" name="message" data-label="Message" rows="4" required placeholder="Where are you now, and what do you want to build?"></textarea></div>
                 <div class="field full">
                   <label class="consent">
                     <input type="checkbox" name="popia-consent" data-label="POPIA consent" required>
-                    <span>I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the <a href="privacy.html">privacy policy</a> (POPIA). We will never share your details for marketing.</span>
+                    <span><span data-i18n="form.consent.pre">I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the </span><a href="privacy.html" data-i18n="form.consent.link">privacy policy</a><span data-i18n="form.consent.post"> (POPIA). We will never share your details for marketing.</span></span>
                   </label>
                 </div>
               </div>
-              <button class="btn btn-primary mt-2" type="submit">Send my enquiry</button>
+              <button class="btn btn-primary mt-2" type="submit" data-i18n="form.sendenquiry">Send my enquiry</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>

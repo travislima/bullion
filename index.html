@@ -47,6 +47,7 @@
         <div class="lang-toggle" role="group" aria-label="Language">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="af" aria-pressed="false">AF</button>
+          <button type="button" data-lang="xh" aria-pressed="false">XH</button>
         </div>
         <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -75,9 +76,23 @@
             <a class="btn btn-primary" href="services.html" data-i18n="hero.cta.services">Our services</a>
             <a class="btn btn-outline-light" href="contact.html" data-i18n="hero.cta.talk">Talk to us</a>
           </div>
+          <div class="hero-quick" aria-label="Quick contact">
+            <a href="#" data-config-href="tel" aria-label="Call us">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+              <span data-config="phone">+27 (0)41 000 0000</span>
+            </a>
+            <a href="#" data-config-href="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp us">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.2L2.1 22l4.9-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3a8.2 8.2 0 1 1 6.7 3.6z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="#" data-config-href="mailto" aria-label="Email us">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              <span data-config="email">info@bullionwealth.co.za</span>
+            </a>
+          </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <img src="assets/img/bullion-mark.png" alt="" width="340" height="340" fetchpriority="high">
+        <div class="hero-art">
+          <img src="assets/img/hero-placeholder.svg" alt="Placeholder for the hero photograph — team shoot pending" width="400" height="500" fetchpriority="high" style="width:min(400px,90%); border-radius:24px;">
         </div>
       </div>
     </section>
@@ -91,9 +106,9 @@
           <p data-i18n="who.body">Bullion is an authorised Sanlam practice dedicated to helping individuals and families make confident financial decisions. We provide clear guidance, trusted advice, and lifelong partnership across every stage of your financial journey.</p>
         </div>
         <ul class="awards">
-          <li>Sanlam Blue Star — Franchise of the Year 2024</li>
-          <li>Currently ranked #1 nationally</li>
-          <li>Authorised by Sanlam</li>
+          <li data-i18n="awards.1">Sanlam Blue Star — Franchise of the Year 2024</li>
+          <li data-i18n="awards.2">Currently ranked #1 nationally</li>
+          <li data-i18n="awards.3">Authorised by Sanlam</li>
         </ul>
       </div>
     </section>
@@ -108,45 +123,45 @@
         <div class="grid grid-3">
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Short-Term Insurance</h3>
-            <p>Protect your home, vehicle, and valuables with comprehensive cover designed to safeguard your lifestyle today.</p>
-            <a class="card-link" href="services.html#short-term-insurance">Learn more</a>
+            <h3 data-i18n="svc.1.t">Short-Term Insurance</h3>
+            <p data-i18n="svc.1.d">Protect your home, vehicle, and valuables with comprehensive cover designed to safeguard your lifestyle today.</p>
+            <a class="card-link" href="services.html#short-term-insurance" data-i18n="common.learnmore">Learn more</a>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Medical Aid &amp; Health Cover</h3>
-            <p>Access tailored medical aid and gap cover solutions that ensure your health is protected when you need it most.</p>
-            <a class="card-link" href="services.html#medical-aid">Learn more</a>
+            <h3 data-i18n="svc.2.t">Medical Aid &amp; Health Cover</h3>
+            <p data-i18n="svc.2.d">Access tailored medical aid and gap cover solutions that ensure your health is protected when you need it most.</p>
+            <a class="card-link" href="services.html#medical-aid" data-i18n="common.learnmore">Learn more</a>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Investment Planning</h3>
-            <p>Grow your wealth through structured investment strategies aligned with your goals, risk profile, and time horizon.</p>
-            <a class="card-link" href="services.html#investment-planning">Learn more</a>
+            <h3 data-i18n="svc.3.t">Investment Planning</h3>
+            <p data-i18n="svc.3.d">Grow your wealth through structured investment strategies aligned with your goals, risk profile, and time horizon.</p>
+            <a class="card-link" href="services.html#investment-planning" data-i18n="common.learnmore">Learn more</a>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Retirement Planning</h3>
-            <p>Build a secure retirement with personalised plans that ensure long-term financial independence.</p>
-            <a class="card-link" href="services.html#retirement-planning">Learn more</a>
+            <h3 data-i18n="svc.4.t">Retirement Planning</h3>
+            <p data-i18n="svc.4.d">Build a secure retirement with personalised plans that ensure long-term financial independence.</p>
+            <a class="card-link" href="services.html#retirement-planning" data-i18n="common.learnmore">Learn more</a>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Risk Planning</h3>
-            <p>Life cover, disability cover, income protection — everything you need to protect your family and future.</p>
-            <a class="card-link" href="services.html#risk-planning">Learn more</a>
+            <h3 data-i18n="svc.5.t">Risk Planning</h3>
+            <p data-i18n="svc.5.d">Life cover, disability cover, income protection — everything you need to protect your family and future.</p>
+            <a class="card-link" href="services.html#risk-planning" data-i18n="common.learnmore">Learn more</a>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Savings Solutions</h3>
-            <p>Flexible savings plans for education, emergencies, and long-term goals.</p>
-            <a class="card-link" href="services.html#savings-solutions">Learn more</a>
+            <h3 data-i18n="svc.6.t">Savings Solutions</h3>
+            <p data-i18n="svc.6.d">Flexible savings plans for education, emergencies, and long-term goals.</p>
+            <a class="card-link" href="services.html#savings-solutions" data-i18n="common.learnmore">Learn more</a>
           </article>
           <article class="card reveal">
             <div class="dot" aria-hidden="true"></div>
-            <h3>Wills &amp; Legacy Planning</h3>
-            <p>Ensure your wealth is transferred smoothly and responsibly to the next generation.</p>
-            <a class="card-link" href="services.html#wills-legacy">Learn more</a>
+            <h3 data-i18n="svc.7.t">Wills &amp; Legacy Planning</h3>
+            <p data-i18n="svc.7.d">Ensure your wealth is transferred smoothly and responsibly to the next generation.</p>
+            <a class="card-link" href="services.html#wills-legacy" data-i18n="common.learnmore">Learn more</a>
           </article>
         </div>
       </div>
@@ -161,20 +176,20 @@
         </div>
         <div class="grid grid-2" style="gap:2rem 3rem;">
           <div class="why-item reveal">
-            <h3>A Complete Financial Partner</h3>
-            <p>We integrate insurance, investments, retirement, health, and legacy planning into one seamless strategy.</p>
+            <h3 data-i18n="why.1.t">A Complete Financial Partner</h3>
+            <p data-i18n="why.1.d">We integrate insurance, investments, retirement, health, and legacy planning into one seamless strategy.</p>
           </div>
           <div class="why-item reveal">
-            <h3>Personalised Advice</h3>
-            <p>Your plan is built around your life, your goals, and your future — never a one-size-fits-all approach.</p>
+            <h3 data-i18n="why.2.t">Personalised Advice</h3>
+            <p data-i18n="why.2.d">Your plan is built around your life, your goals, and your future — never a one-size-fits-all approach.</p>
           </div>
           <div class="why-item reveal">
-            <h3>Trusted Expertise</h3>
-            <p>As an authorised Sanlam practice, we offer industry-leading products backed by world-class financial security.</p>
+            <h3 data-i18n="why.3.t">Trusted Expertise</h3>
+            <p data-i18n="why.3.d">As an authorised Sanlam practice, we offer industry-leading products backed by world-class financial security.</p>
           </div>
           <div class="why-item reveal">
-            <h3>Lifelong Guidance</h3>
-            <p>Your needs evolve — and so do we. We walk with you through every stage of life.</p>
+            <h3 data-i18n="why.4.t">Lifelong Guidance</h3>
+            <p data-i18n="why.4.d">Your needs evolve — and so do we. We walk with you through every stage of life.</p>
           </div>
         </div>
       </div>
@@ -191,23 +206,23 @@
         <div class="grid grid-4">
           <div class="phil-item reveal">
             <div class="num" aria-hidden="true">1</div>
-            <h3>Insure Today</h3>
-            <p>Protect your lifestyle and assets from unexpected events.</p>
+            <h3 data-i18n="pillars.1">Insure Today</h3>
+            <p data-i18n="phil.1.d">Protect your lifestyle and assets from unexpected events.</p>
           </div>
           <div class="phil-item reveal">
             <div class="num" aria-hidden="true">2</div>
-            <h3>Plan for Tomorrow</h3>
-            <p>Build a roadmap that supports your goals and adapts as life changes.</p>
+            <h3 data-i18n="pillars.2">Plan for Tomorrow</h3>
+            <p data-i18n="phil.2.d">Build a roadmap that supports your goals and adapts as life changes.</p>
           </div>
           <div class="phil-item reveal">
             <div class="num" aria-hidden="true">3</div>
-            <h3>Invest for the Long Term</h3>
-            <p>Grow your wealth with disciplined, strategic investment planning.</p>
+            <h3 data-i18n="pillars.3">Invest for the Long Term</h3>
+            <p data-i18n="phil.3.d">Grow your wealth with disciplined, strategic investment planning.</p>
           </div>
           <div class="phil-item reveal">
             <div class="num" aria-hidden="true">4</div>
-            <h3>Secure Your Legacy</h3>
-            <p>Ensure your family's future is protected and your wishes are honoured.</p>
+            <h3 data-i18n="pillars.4">Secure Your Legacy</h3>
+            <p data-i18n="phil.4.d">Ensure your family's future is protected and your wishes are honoured.</p>
           </div>
         </div>
       </div>
@@ -217,52 +232,52 @@
     <section class="paper">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">How can we help?</span>
-          <h2>Tell us what you need — we'll take it from there</h2>
+          <span class="eyebrow" data-i18n="guided.eyebrow">How can we help?</span>
+          <h2 data-i18n="guided.h2">Tell us what you need — we'll take it from there</h2>
         </div>
         <div class="guided-cta reveal">
           <div class="guided-choices" role="group" aria-label="How can we help?">
-            <button type="button" class="guided-choice" data-panel="call" aria-expanded="false">I want an advisor to call me</button>
-            <button type="button" class="guided-choice" data-panel="service" aria-expanded="false">I want to know more about a service</button>
-            <button type="button" class="guided-choice" data-panel="advisor" aria-expanded="false">I want to become an advisor</button>
+            <button type="button" class="guided-choice" data-panel="call" aria-expanded="false" data-i18n="guided.call">I want an advisor to call me</button>
+            <button type="button" class="guided-choice" data-panel="service" aria-expanded="false" data-i18n="guided.service">I want to know more about a service</button>
+            <button type="button" class="guided-choice" data-panel="advisor" aria-expanded="false" data-i18n="guided.advisor">I want to become an advisor</button>
           </div>
           <div class="guided-panel" data-panel="call" hidden>
             <form data-lead data-subject="Please call me — website enquiry" novalidate>
               <div class="form-grid">
-                <div class="field"><label for="g-name">Your name *</label><input id="g-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
-                <div class="field"><label for="g-phone">Phone number *</label><input id="g-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel" required></div>
-                <div class="field full"><label for="g-time">Best time to call</label><select id="g-time" name="time" data-label="Best time"><option value="">Any time</option><option>Morning</option><option>Midday</option><option>Afternoon</option></select></div>
+                <div class="field"><label for="g-name" data-i18n="form.name">Your name *</label><input id="g-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="g-phone" data-i18n="form.phone">Phone number *</label><input id="g-phone" name="phone" data-label="Phone" type="tel" autocomplete="tel" required></div>
+                <div class="field full"><label for="g-time" data-i18n="form.besttime">Best time to call</label><select id="g-time" name="time" data-label="Best time"><option value="" data-i18n="form.anytime">Any time</option><option data-i18n="form.morning">Morning</option><option data-i18n="form.midday">Midday</option><option data-i18n="form.afternoon">Afternoon</option></select></div>
                 <div class="field full">
                   <label class="consent">
                     <input type="checkbox" name="popia-consent" data-label="POPIA consent" required>
-                    <span>I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the <a href="privacy.html">privacy policy</a> (POPIA). We will never share your details for marketing.</span>
+                    <span><span data-i18n="form.consent.pre">I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the </span><a href="privacy.html" data-i18n="form.consent.link">privacy policy</a><span data-i18n="form.consent.post"> (POPIA). We will never share your details for marketing.</span></span>
                   </label>
                 </div>
               </div>
-              <button class="btn btn-primary mt-2" type="submit">Request a call</button>
+              <button class="btn btn-primary mt-2" type="submit" data-i18n="guided.requestcall">Request a call</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
           <div class="guided-panel" data-panel="service" hidden>
             <form data-lead data-subject="Service enquiry — website" novalidate>
               <div class="form-grid">
-                <div class="field"><label for="s-name">Your name *</label><input id="s-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
-                <div class="field"><label for="s-email">Email *</label><input id="s-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
-                <div class="field full"><label for="s-service">Which service? *</label><select id="s-service" name="service" data-label="Service" required><option value="">Choose a service…</option><option>Short-Term Insurance</option><option>Medical Aid &amp; Health Cover</option><option>Investment Planning</option><option>Retirement Planning</option><option>Risk Planning</option><option>Savings Solutions</option><option>Wills &amp; Legacy Planning</option></select></div>
+                <div class="field"><label for="s-name" data-i18n="form.name">Your name *</label><input id="s-name" name="name" data-label="Name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="s-email" data-i18n="form.email">Email *</label><input id="s-email" name="email" data-label="Email" type="email" autocomplete="email" required></div>
+                <div class="field full"><label for="s-service" data-i18n="form.whichservice">Which service? *</label><select id="s-service" name="service" data-label="Service" required><option value="" data-i18n="form.chooseservice">Choose a service…</option><option>Short-Term Insurance</option><option>Medical Aid &amp; Health Cover</option><option>Investment Planning</option><option>Retirement Planning</option><option>Risk Planning</option><option>Savings Solutions</option><option>Wills &amp; Legacy Planning</option></select></div>
                 <div class="field full">
                   <label class="consent">
                     <input type="checkbox" name="popia-consent" data-label="POPIA consent" required>
-                    <span>I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the <a href="privacy.html">privacy policy</a> (POPIA). We will never share your details for marketing.</span>
+                    <span><span data-i18n="form.consent.pre">I consent to Bullion collecting and using the details above to respond to my enquiry, in line with the </span><a href="privacy.html" data-i18n="form.consent.link">privacy policy</a><span data-i18n="form.consent.post"> (POPIA). We will never share your details for marketing.</span></span>
                   </label>
                 </div>
               </div>
-              <button class="btn btn-primary mt-2" type="submit">Send my question</button>
+              <button class="btn btn-primary mt-2" type="submit" data-i18n="guided.sendquestion">Send my question</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
           <div class="guided-panel" data-panel="advisor" hidden>
-            <p style="margin-bottom:1rem;">Bullion is growing from 45 to 100 advisors across the Eastern Cape — and we'd like to meet you.</p>
-            <a class="btn btn-primary" href="join.html">Explore joining Bullion</a>
+            <p style="margin-bottom:1rem;" data-i18n="guided.advisortext">Bullion is growing from 45 to 100 advisors across the Eastern Cape — and we'd like to meet you.</p>
+            <a class="btn btn-primary" href="join.html" data-i18n="guided.explorejoin">Explore joining Bullion</a>
           </div>
         </div>
       </div>
@@ -272,21 +287,21 @@
     <section>
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Contact us</span>
+          <span class="eyebrow" data-i18n="contactsec.eyebrow">Contact us</span>
           <h2 data-i18n="contact.h2">Let's build your financial future together</h2>
         </div>
         <div class="contact-rows reveal">
           <div class="contact-row">
             <div class="dot" aria-hidden="true"></div>
-            <div><h3>Phone</h3><p><a href="#" data-config-href="tel"><span data-config="phone">+27 (0)41 000 0000</span></a></p></div>
+            <div><h3 data-i18n="contactsec.phone">Phone</h3><p><a href="#" data-config-href="tel"><span data-config="phone">+27 (0)41 000 0000</span></a></p></div>
           </div>
           <div class="contact-row">
             <div class="dot" aria-hidden="true"></div>
-            <div><h3>Email</h3><p><a href="#" data-config-href="mailto"><span data-config="email">info@bullionwealth.co.za</span></a></p></div>
+            <div><h3 data-i18n="contactsec.email">Email</h3><p><a href="#" data-config-href="mailto"><span data-config="email">info@bullionwealth.co.za</span></a></p></div>
           </div>
           <div class="contact-row">
             <div class="dot" aria-hidden="true"></div>
-            <div><h3>WhatsApp</h3><p><a href="#" data-config-href="whatsapp" target="_blank" rel="noopener">Chat to us on WhatsApp</a></p></div>
+            <div><h3>WhatsApp</h3><p><a href="#" data-config-href="whatsapp" target="_blank" rel="noopener" data-i18n="contactsec.wachat">Chat to us on WhatsApp</a></p></div>
           </div>
         </div>
         <p class="location-line" data-config="locationLine">Nelson Mandela Bay · Eastern Cape · South Africa</p>
